@@ -47,9 +47,10 @@
   },
   "scripts": {
     "generate-registry": "node scripts/generate-registry.js",
+    "copy-skills": "node scripts/copy-skills.js",
     "prebuild": "yarn generate-registry",
     "sass": "sass src:dist",
-    "build": "tsc && yarn run sass",
+    "build": "tsc && yarn copy-skills && yarn run sass",
     "dev": "tsc --watch",
     "typecheck": "tsc --noEmit"
   },
